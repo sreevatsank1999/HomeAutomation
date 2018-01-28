@@ -357,7 +357,7 @@ class Switch {
 	struct DataEntry {
 		time_t EventTime;
 		enum Event;
-		string Value; ??????????????
+		string Value;
 	};
 
 public:
