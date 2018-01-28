@@ -1,0 +1,18 @@
+[Global Settings]
+TotalSwitchNumber=10
+enumOpMode=Auto
+
+[Switch]
+IDNo=542669
+enumType=Light
+fPowerRating=2.051
+enumStatus=On
+[Switch.GPIO]
+strPinNo="4"
+strPinDir="out"
+strPinVal="1"
+[Switch.Data]
+DatafileAddress="Data\SwitchID#542669.dat"
+blnwas_Enabled=true
+
+[Switch ID#874354]

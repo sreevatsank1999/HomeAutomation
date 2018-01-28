@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>    
+    <script src="js/vrview.js"></script>   
+    <script>
+        window.addEventListener('load', onVrViewLoad);
+
+        function onVrViewLoad() {
+            var vrView = new VRView.Player('#vrview', {
+                image: 'VR/taj-mahal.jpg',
+                is_stereo: false
+            });
+
+        }
+    </script>
+</head>
+<body>
+        <script>
+            function Switch_setup() {
+                var arrSwitch = document.getElementsByClassName("Switch_Container");
+                var c = arrSwitch.length;
+                document.getElementById("Test").innerHTML = c;
+                for (var i = 0; i < arrSwitch.childElementCount; i++) {
+                    var strPic_Off = "" + arrSwitch[i].className + "_Off" + ".gif";
+                    var strPic_On = "" + arrSwitch[i].className + "_On" + ".gif";
+
+
+                    arrSwitch[i].getElementsByClassName("Pic_Off")[0].src = strPic_Off;
+                    arrSwitch[i].getElementsByClassName("Pic_On")[0].src = strPic_On;
+
+                    console.log(strPic_Off);
+                    console.log(strPic_On);
+                    console.log(5 + 4);                    
+                }
+                return -1;
+            }
+
+            function Pic_On() {
+                var Parent = this.parentNode;
+                var clsPic_On = Parent.getElementsByClassName("Pic_On");
+                var clsPic_Off = Parent.getElementsByClassName("Pic_Off");
+
+                clsPic_Off[0].style = "display:none";
+                clsPic_On[0].style = "display:block";
+            }
+
+            function  Pic_Off(){
+                var Parent = this.parentNode;
+                var clsPic_On = Parent.getElementsByClassName("Pic_On");
+                var clsPic_Off = Parent.getElementsByClassName("Pic_Off");
+
+                clsPic_On[0].style = "display:none";
+                clsPic_Off[0].style = "display:block";
+            }
+        </script>
+    <div class="Switch_Container">
+
+        <div class="Switch Bulb">
+            <div class="Pic_Off" style="display:block" onclick="Pic_On()"><img id="imgPic_Off" src="" width="100" height="180"></div>
+            <div class="Pic_On" style="display:none" onclick="Pic_Off()"><img id="imgPic_On" src="" width="100" height="180"></div>
+        </div>
+        <script> Switch_setup(); </script>
+    </div>
+
+
+    <div id="vrview"></div>
+
+    <p id="Test"></p>
+</body>
+</html>
