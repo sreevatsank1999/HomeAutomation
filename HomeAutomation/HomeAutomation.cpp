@@ -740,9 +740,9 @@ int isValid_is_enabled(string is_enabled) {
 }
 bool StringToBool_is_Enabled(string is_enabled) {
 
-	int Valedis_enabled = isValid_is_enabled(is_enabled);
+	int Validis_enabled = isValid_is_enabled(is_enabled);
 
-	if (Valedis_enabled != -1)			return (bool)Valedis_enabled;
+	if (Validis_enabled != -1)			return (bool)Validis_enabled;
 	else	printf("Error: StringToBool_is_Enabled() couldn't convert to bool \n");
 }
 string BoolToString_is_enabled(bool is_Enabled) {
